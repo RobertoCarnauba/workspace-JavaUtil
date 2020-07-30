@@ -1,0 +1,45 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Student;
+
+public class Programa {
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("============| Note Students |===========");
+		Student student = new Student();
+		System.out.printf("Stundent nome:");
+		student.nome = sc.nextLine();
+		System.out.printf("Stundent Note 1:");
+		student.note_1 = sc.nextDouble();
+		System.out.printf("Stundent Note 2:");
+		student.note_2 = sc.nextDouble();
+		System.out.printf("Stundent Note 3:");
+		student.note_3 = sc.nextDouble();
+		
+		System.out.println("========================================");
+		System.out.printf("Final NOTES: %.2f%n", student.finalNotes());
+		System.out.println("========================================");
+		
+		if(student.finalNotes() < 30.0){
+			System.out.println("Studend REPRO - [FAILD]");
+			student.missingPoint();
+			System.out.println("========================================");
+			System.out.println();
+		} else {
+			System.out.println("Studend APPROVED - [SUCCESS]");
+			System.out.println("========================================");
+			System.out.println();
+		}
+		
+		
+		
+		sc.close();
+	}
+
+}

@@ -1,0 +1,5 @@
+package repro_approvedstudent.entities;
+
+public class Student {
+
+}

@@ -1,0 +1,36 @@
+package entities;
+
+public class Accont {
+
+	private Integer number;
+	private String holder;
+	private Double balance; 
+	
+	public Accont(Integer number, String holder) {
+		this.number = number;
+		this.holder = holder;
+	}
+
+	public Accont(Integer number, String holder, Double balance) {
+		this.number = number;
+		this.holder = holder;
+		this.balance = balance;
+	}
+
+	public Integer getNumber() {
+		return number;
+	}
+
+	public String getHolder() {
+		return holder;
+	}
+
+	public void setHolder(String holder) {
+		this.holder = holder;
+	}
+
+	public Double getBalance() {
+		return balance;
+	}
+
+}

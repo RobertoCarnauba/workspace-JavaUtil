@@ -1,0 +1,38 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Accont;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Accont accont;
+		
+		System.out.println("Enter account number: ");
+		int number = sc.nextInt();
+		System.out.println("Enter account holder: ");
+		String holder = sc.nextLine();
+		System.out.println("Is there a initial deposit value:");
+		double response = sc.nextDouble();
+		if(response == 'y'){
+			System.out.println("Enter initial deposit value:");
+			double initailDeposit = sc.nextDouble();
+			accont = new Accont(number, holder, initailDeposit);
+		} else {
+			accont = new Accont(number, holder);
+		}
+		
+		System.out.println();
+		System.out.println("Accont data:");
+		System.out.println(accont);
+		System.out.println();
+		
+		sc.close();
+	}
+
+}
