@@ -35,6 +35,9 @@ target/
 .settings/
 .classpath
 .project
+.recommenders
+.metadata
+RemoteSystemsTempFiles
 
 # NetBeans specific
 nbproject/private/
